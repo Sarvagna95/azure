@@ -1,0 +1,42 @@
+{
+	"name": "bloboutput",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage_output",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "out.csv",
+				"folderPath": "output",
+				"container": "sample1"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "num",
+				"type": "String"
+			},
+			{
+				"name": "name",
+				"type": "String"
+			},
+			{
+				"name": "place",
+				"type": "String"
+			},
+			{
+				"name": "date",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
